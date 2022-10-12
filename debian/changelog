@@ -1,0 +1,268 @@
+lxqt-metapackages (30) unstable; urgency=medium
+
+  * Use x-window-manager as alternative in lxqt (Closes: #942157)
+  * use mail-reader as alternative for thunderbird
+  * Bumped Standards to 4.5.0, no changes needed
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 23 Feb 2020 21:17:22 +0100
+
+lxqt-metapackages (29) unstable; urgency=medium
+
+  * Recommends lxqt-branding-debian | lxqt-branding in lxqt-core
+  * Depends on lxqt-branding-debian | lxqt-branding in lxqt 
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 17 Feb 2019 21:57:08 +0100
+
+lxqt-metapackages (28) unstable; urgency=medium
+
+  * lxqt-core:
+    - Depend on lxqt-branding-debian | lxqt-branding
+    - Recommend qterminal
+    - Recommend qps
+    - Suggest feathernotes
+    - Suggest preload
+  * lxqt:
+    - Added dependency on sddm-theme-debian-elarun instaed of -maui
+    - Added recommendation on feathernotes
+    - Added recommendation on meteo-qt
+    - Added recommendation on preload
+    - Moved screengrab from recommends to suggests
+    - Moved calibre from recommends to suggests
+    - Removed suggestion compton
+    - Removed suggestion lxappearance
+    - Removed suggestion openbox
+    - Added suggestion qt5-style-quantum
+    - Removed zim from suggestions, we have feathernotes now
+  * Removed debian/compat
+  * Replaced debhelper dependency with debhelper-compat (= 12)
+  * Bumped Standards to 4.3.0
+  * Bumped year in copyright
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 15 Feb 2019 23:08:53 +0100
+
+lxqt-metapackages (27) unstable; urgency=medium
+
+  * Added clipit and xfce4-clipman as alternatives for qlipper
+    (Closes: #897073)
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 29 Apr 2018 03:07:00 +0200
+
+lxqt-metapackages (26) unstable; urgency=medium
+
+  * Added nm-tray to networking alternatives (Closes: #896515)
+  * Fixed needed debhelper version to >= 11~
+  * Bumped Standards to 4.1.4, no changes needed
+  * Fixed VCS fields (vcs-field-not-canonical)
+  * Removed trailing whitespaces from changelog
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 23 Apr 2018 23:11:26 +0200
+
+lxqt-metapackages (25) unstable; urgency=medium
+
+  * Added missed colon
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 10 Feb 2018 02:25:44 +0100
+
+lxqt-metapackages (24) unstable; urgency=medium
+
+  * added featherpad to lxqt dependencies
+  * demoted juffed from Recommends to Suggests
+  * Bumped Standards to 4.1.3, no changes needed
+  * Bumped debhelpers to >= 11
+  * Bumped compat to 11
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 09 Feb 2018 23:25:55 +0100
+
+lxqt-metapackages (23) unstable; urgency=medium
+
+  * Removed gksu in lxqt - was #856701.
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 18 Dec 2017 23:10:42 +0100
+
+lxqt-metapackages (22) unstable; urgency=medium
+
+  * Bumped Standards to 4.1.2, no changes needed
+  * Removed branch from VCS fields
+
+ -- Alf Gaida <agaida@siduction.org>  Thu, 14 Dec 2017 19:47:18 +0100
+
+lxqt-metapackages (21) unstable; urgency=medium
+
+  * Transition to unstable
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 04 Dec 2017 19:26:00 +0100
+
+lxqt-metapackages (20) experimental; urgency=medium
+
+  * Bumped Standards to 4.1.1
+  * Replaced dependency on lxqt-common with
+    lxqt-themes | lxqt-theme, lxqt-system-theme
+  * Breaks/replaces lxqt-common << 0.12.0
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 28 Oct 2017 20:47:51 +0200
+
+lxqt-metapackages (19) unstable; urgency=medium
+
+  * Added qttranslations5-l10n to Recommends for lxqt-core and
+    Depends for lxqt
+  * nodm is linux-only
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 24 Jul 2017 21:30:32 +0200
+
+lxqt-metapackages (18) unstable; urgency=medium
+
+  * Removed Suggests qps [linuy-any] from lxqt
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 04 Jul 2017 23:52:18 +0200
+
+lxqt-metapackages (17) unstable; urgency=medium
+
+  * Removed some typos
+  * Declared some packages [linux-all]
+  * nm-applet should be plasma-nm
+  * Removed the gksu alternative to lxqt-sudo (Closes: #856701)
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 04 Jul 2017 22:17:42 +0200
+
+lxqt-metapackages (16) unstable; urgency=medium
+
+  * Move back networking components back to recommends. Unfortunally it is
+    not possible to force some kind of network management UI without breaking
+    existing installations. So only recommend these packages seems to be the
+    way to go. (Closes: #867128)
+  * Moved some things from lxqt-core to lxqt, rework some recommends.
+    Especially moved the window manager dependency to lxqt, really not needed
+    in lxqt-core. (Closes: #867015)
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 04 Jul 2017 04:21:27 +0200
+
+lxqt-metapackages (15) unstable; urgency=medium
+
+  * Bump Standards to 4.0.0 -- no changes needed
+  * Fixed wording in changelog.
+  * Fixed typo in dependencies.
+  * Some dependencies and recommends refined.
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 02 Jul 2017 00:21:13 +0200
+
+lxqt-metapackages (14) unstable; urgency=medium
+
+  * Re-think lxqt and lxqt-core. lxqt-core was to spartan, it lacks important
+    functionalities that even advanced users could not easily figure out.
+    (Closes: #866236)
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 01 Jul 2017 23:44:15 +0200
+
+lxqt-metapackages (13) unstable; urgency=medium
+
+  * depends on a display manager
+  * ifupdown only for !linux-any
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 24 Jan 2017 17:05:39 +0100
+
+lxqt-metapackages (12) unstable; urgency=medium
+
+  * Removed alternative recommend x-display-manager, added slim, gdm3, lxdm
+  * We want to avoid sddm-theme-breeze as it is nor really lightweight
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 23 Jan 2017 17:17:38 +0100
+
+lxqt-metapackages (11) unstable; urgency=medium
+
+  * Make the recommendation for sddm-theme-maui or sddm-theme-debian-maui
+    stronger
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 23 Jan 2017 01:58:42 +0100
+
+lxqt-metapackages (10) unstable; urgency=medium
+
+  * cleanup recommends after connman/cmst are in testing (Closes: #850209)
+
+ -- Alf Gaida <agaida@siduction.org>  Thu, 05 Jan 2017 20:50:50 +0100
+
+lxqt-metapackages (9) unstable; urgency=medium
+
+  * network-manager is linux-any
+  * added ifupdown as recommendation
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 03 Jan 2017 19:10:29 +0100
+
+lxqt-metapackages (8) unstable; urgency=medium
+
+  * Fix the description of lxqt-core - we depend on xfwm4 or
+    a window manager of choice.
+
+ -- Alf Gaida <agaida@siduction.org>  Fri, 23 Dec 2016 21:08:38 +0100
+
+lxqt-metapackages (7) unstable; urgency=medium
+
+  * Set lxqt-core Architecture: all, Multi-Arch: foreign
+  * Set lxqt  Architecture: any, Multi-Arch: same
+  * Recommend pavucontrol-qt | pavucontrol, both work fine
+  * Recommend xarchiver | ark | engrampa
+
+ -- Alf Gaida <agaida@siduction.org>  Sat, 22 Oct 2016 13:58:35 +0200
+
+lxqt-metapackages (6) unstable; urgency=medium
+
+  * Switch to Architecture: any
+  * Mark some dependencies linux-only (cmst, connman, qps, sddm)
+  * lxqt depend on lxqt-core (= ${binary:Version}) now
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 19 Sep 2016 22:13:55 +0200
+
+lxqt-metapackages (5) unstable; urgency=medium
+
+  * Switch from openbox to xfwm4 as default WM
+    Reasons: xfmw4 is available on all platforms, has a built in
+    composer (vs. openbox + compton, but compton is nearly dead)
+  * Demote openbox, obconf-qt, compton-conf and compton to Suggests
+  * Demote lximage-qt to Recommends
+  * Recommend firefox instead of qupzilla
+  * Demote lxqt-sudo, qterminal, xarchiver to Recommends
+  * Bump compat to 10
+  * Bump build dependency debhelper to (>= 10)
+  * Commented out trojita for now
+
+ -- Alf Gaida <agaida@siduction.org>  Mon, 19 Sep 2016 05:05:01 +0200
+
+lxqt-metapackages (4) unstable; urgency=medium
+
+  * fix typo qpass -> qtpass
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 14 Feb 2016 13:48:45 +0100
+
+lxqt-metapackages (3) unstable; urgency=medium
+
+  * Fixed license to GPL2.0+
+  * Added claws-mail as alternative in suggests
+  * Fixed long description line
+  * Fixed copyright years
+  * Fixed link to copyright format to https
+
+ -- Alf Gaida <agaida@siduction.org>  Sun, 14 Feb 2016 12:49:39 +0100
+
+lxqt-metapackages (2) unstable; urgency=medium
+
+  * core should depend on lxqt-sudo with gksu as alternative
+  * Some more recommends: cmst, compton, compton-conf, qpdfview, qps
+  * Some more suggestions: calibre, juffed, qpass, trojita, vokoscreen, zim
+
+ -- Alf Gaida <agaida@siduction.org>  Tue, 09 Feb 2016 00:23:35 +0100
+
+lxqt-metapackages (1) unstable; urgency=medium
+
+  [ Peter Mattern ]
+  * Adjust source package control file.
+
+  [ ChangZhuo Chen (陳昌倬) ]
+  * Update Vcs-* fields.
+  * Update Standards-Version to 3.9.7.
+
+ -- ChangZhuo Chen (陳昌倬) <czchen@debian.org>  Mon, 08 Feb 2016 23:39:52 +0800
+
+lxqt-metapackages (0) unstable; urgency=medium
+
+  * initial release (Closes: #795803)
+
+ -- ChangZhuo Chen (陳昌倬) <czchen@debian.org>  Sat, 14 Nov 2015 10:18:21 +0800

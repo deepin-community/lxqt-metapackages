@@ -1,0 +1,117 @@
+Source: lxqt-metapackages
+Maintainer: LXQt Packaging Team <pkg-lxqt-devel@lists.alioth.debian.org>
+Uploaders: Alf Gaida <agaida@siduction.org>,
+           ChangZhuo Chen (陳昌倬) <czchen@debian.org>
+Section: metapackages
+Priority: optional
+Build-Depends: debhelper-compat (= 12)
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/lxqt-team/lxqt-metapackages
+Vcs-Git: https://salsa.debian.org/lxqt-team/lxqt-metapackages.git
+Homepage: http://www.lxqt.org/
+
+Package: lxqt-core
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         desktop-file-utils,
+         lxqt-themes | lxqt-theme,
+         lxqt-system-theme,
+         lxqt-config,
+         lxqt-notificationd,
+         lxqt-globalkeys,
+         lxqt-panel,
+         lxqt-policykit,
+         lxqt-qtplugin,
+         lxqt-runner,
+         lxqt-session,
+         pcmanfm-qt,
+         qterminal
+Recommends: featherpad,
+            lximage-qt,
+            lxqt-about,
+            lxqt-branding-debian | lxqt-branding,
+            lxqt-powermanagement,
+            lxqt-sudo,
+            pavucontrol-qt | pavucontrol,
+            qlipper | clipit | xfce4-clipman,
+            qps,
+            qttranslations5-l10n,
+            xarchiver | ark | engrampa,
+            xscreensaver
+Suggests: feathernotes,
+          firefox | www-browser,
+          lxqt,
+          lxqt-openssh-askpass,
+          preload
+Breaks: lxqt-common (<< 0.12.3)
+Replaces: lxqt-common (<< 0.12.3)
+Description: Metapackage for the LXQt core
+ LXQt is an advanced, easy-to-use, and fast desktop environment based on Qt
+ technologies. It has been tailored for users who value simplicity, speed, and
+ an intuitive interface. Unlike most desktop environments, LXQt also works
+ fine with less powerful machines.
+ .
+ This package is a metapackage meant to provide the core components of LXQt.
+ These include pcmanfm-qt, lxqt-panel, lxqt-runner, lxqt-session and esp.
+ lxqt-qtplugin (needed for communication between session, components and
+ applications).
+ .
+ Recommend for lean and/or parallel installation with other desktop
+ environments.
+
+Package: lxqt
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends},
+         featherpad,
+         lximage-qt,
+         lxqt-about,
+         lxqt-admin,
+         lxqt-branding-debian | lxqt-branding,
+         lxqt-core (= ${source:Version}),
+         lxqt-openssh-askpass,
+         lxqt-powermanagement,
+         lxqt-sudo,
+         pavucontrol-qt | pavucontrol,
+         qlipper | clipit | xfce4-clipman,
+         qps [linux-any],
+         qterminal,
+         qttranslations5-l10n,
+         sddm-theme-debian-elarun [linux-any] | sddm-theme [linux-any] | x-display-manager,
+         xarchiver | ark | engrampa,
+         xfwm4 | x-window-manager
+Recommends: audacious | clementine | qmmp,
+            cmst [linux-any] | nm-tray [linux-any] | network-manager-gnome [linux-any]
+            | plasma-nm [linux-any ] | wicd | ifupdown [!linux-any],
+            feathernotes,
+            gucharmap,
+            firefox | www-browser,
+            meteo-qt,
+            preload,
+            qpdfview,
+            quassel | quassel-client | hexchat | irssi | weechat,
+            screengrab,
+            smplayer,
+            smtube,
+            thunderbird | mail-reader,
+Suggests: calibre,
+          compton-conf,
+          juffed,
+          nomacs,
+          obconf-qt,
+          qtpass,
+	  qt5-style-kvantum,
+          shutter,
+          vokoscreen
+Breaks: lxqt-common (<< 0.12.3)
+Replaces: lxqt-common (<< 0.12.3)
+Description: Metapackage for LXQt
+ LXQt is an advanced, easy-to-use, and fast desktop environment based on Qt
+ technologies. It has been tailored for users who value simplicity, speed, and
+ an intuitive interface. Unlike most desktop environments, LXQt also works
+ fine with less powerful machines.
+ .
+ This package is a metapackage meant to provide all components of LXQt plus
+ some recommended components to provide a nearly feature complete desktop
+ environment.
