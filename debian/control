@@ -1,14 +1,15 @@
 Source: lxqt-metapackages
-Maintainer: LXQt Packaging Team <pkg-lxqt-devel@lists.alioth.debian.org>
-Uploaders: Alf Gaida <agaida@siduction.org>,
+Maintainer: LXQt Packaging Team <team+lxqt@tracker.debian.org>
+Uploaders: Andrew Lee (李健秋) <ajqlee@debian.org>,
            ChangZhuo Chen (陳昌倬) <czchen@debian.org>
 Section: metapackages
 Priority: optional
-Build-Depends: debhelper-compat (= 12)
-Standards-Version: 4.5.0
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.7.2
 Vcs-Browser: https://salsa.debian.org/lxqt-team/lxqt-metapackages
 Vcs-Git: https://salsa.debian.org/lxqt-team/lxqt-metapackages.git
 Homepage: http://www.lxqt.org/
+Rules-Requires-Root: no
 
 Package: lxqt-core
 Architecture: all
@@ -26,7 +27,8 @@ Depends: ${misc:Depends},
          lxqt-runner,
          lxqt-session,
          pcmanfm-qt,
-         qterminal
+         qterminal,
+         qtxdg-tools
 Recommends: featherpad,
             lximage-qt,
             lxqt-about,
@@ -36,16 +38,13 @@ Recommends: featherpad,
             pavucontrol-qt | pavucontrol,
             qlipper | clipit | xfce4-clipman,
             qps,
-            qttranslations5-l10n,
-            xarchiver | ark | engrampa,
-            xscreensaver
+            qt6-translations-l10n,
+            lxqt-archiver | xarchiver | engrampa
 Suggests: feathernotes,
-          firefox | www-browser,
+          firefox-esr | www-browser,
           lxqt,
           lxqt-openssh-askpass,
           preload
-Breaks: lxqt-common (<< 0.12.3)
-Replaces: lxqt-common (<< 0.12.3)
 Description: Metapackage for the LXQt core
  LXQt is an advanced, easy-to-use, and fast desktop environment based on Qt
  technologies. It has been tailored for users who value simplicity, speed, and
@@ -77,35 +76,32 @@ Depends: ${misc:Depends},
          qlipper | clipit | xfce4-clipman,
          qps [linux-any],
          qterminal,
-         qttranslations5-l10n,
+         qt6-translations-l10n,
          sddm-theme-debian-elarun [linux-any] | sddm-theme [linux-any] | x-display-manager,
-         xarchiver | ark | engrampa,
+         lxqt-archiver | xarchiver | engrampa,
          xfwm4 | x-window-manager
-Recommends: audacious | clementine | qmmp,
-            cmst [linux-any] | nm-tray [linux-any] | network-manager-gnome [linux-any]
-            | plasma-nm [linux-any ] | wicd | ifupdown [!linux-any],
+Recommends: qmmp | audacious | clementine,
+            nm-tray [linux-any] | cmst [linux-any] | plasma-nm [linux-any ] | network-manager-applet [linux-any] | ifupdown [!linux-any],
             feathernotes,
             gucharmap,
-            firefox | www-browser,
+            firefox-esr | www-browser,
             meteo-qt,
-            preload,
             qpdfview,
-            quassel | quassel-client | hexchat | irssi | weechat,
+            hexchat | irssi | weechat,
             screengrab,
             smplayer,
-            smtube,
             thunderbird | mail-reader,
+            xscreensaver
 Suggests: calibre,
-          compton-conf,
           juffed,
           nomacs,
+          preload,
           obconf-qt,
           qtpass,
-	  qt5-style-kvantum,
+          qt6-style-kvantum,
           shutter,
+          strawberry,
           vokoscreen
-Breaks: lxqt-common (<< 0.12.3)
-Replaces: lxqt-common (<< 0.12.3)
 Description: Metapackage for LXQt
  LXQt is an advanced, easy-to-use, and fast desktop environment based on Qt
  technologies. It has been tailored for users who value simplicity, speed, and

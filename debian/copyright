@@ -5,6 +5,7 @@ Source: <https://tracker.debian.org/pkg/lxqt-metapackages>
 Files: *
 Copyright: 2014-2020 Alf Gaida <agaida@siduction.org>
            2015-2016 ChangZhuo Chen (陳昌倬) <czchen@debian.org>
+           2023-2025 Andrew Lee (李健秋) <ajqlee@debian.org>
 License: GPL-2.0+
 
 License: GPL-2.0+

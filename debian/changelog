@@ -1,3 +1,73 @@
+lxqt-metapackages (33.0) unstable; urgency=medium
+
+  [ ChangZhuo Chen (陳昌倬) ]
+  * Fix indent.
+
+  [ Andrew Lee (李健秋) ]
+  * debian/control: recommends qt6 based qmmp over other alternatives in
+    lxqt.
+  * debian/control: suggests qt based music player strawberry.
+  * debian/control: drop ark which pull KDE depends.
+  * debian/control: do not recommends on quassel | quassel-client which
+    pulls KDE depends. (Closes: #1103667)
+
+ -- Andrew Lee (李健秋) <ajqlee@debian.org>  Mon, 21 Apr 2025 12:20:06 +0200
+
+lxqt-metapackages (33) unstable; urgency=medium
+
+  * debian/control: recommends on lxqt-archiver for lxqt-core.
+    (Closes: #1073866)
+  * Clean up of group membership after 2nd calls.
+  * debian/control: depends on qtxdg-tools for lxqt-core.
+    (Closes: #1090949)
+  * debian/control: recommends on qt6-translations-l10n instead of
+    qttranslations5-l10n.
+  * debian/control: suggests on qt6-style-kvantum instead of qt5-style-
+    kvantum.
+  * debian/control: drop compton-conf which is not available in debian.
+  * debian/control: drop smtube which is not available in debian.
+  * debian/control: drop wicd which is not available in debian.
+  * debian/control: make other qt based network-manager applet over
+    network-manager-gnome.
+  * Recommends xscreensaver in lxqt instead of lxqt-core.
+  * debian/control: suggests preload instead of recommends.
+  * debian/control: bump to Standards-version to 4.7.2, no changes needed.
+  * debian/control: switch from firefox to firefox-esr.
+  * debian/control: rename from network-manager-gnome to network-manager-
+    applet. (Closes: #1086827)
+  * debian/copyright: update.
+
+ -- Andrew Lee (李健秋) <ajqlee@debian.org>  Sun, 30 Mar 2025 12:17:33 +0200
+
+lxqt-metapackages (32) unstable; urgency=medium
+
+  [ ChangZhuo Chen (陳昌倬) ]
+  * Add lxqt-archiver as archive manager (Closes: #987082)
+
+  [ Andrew Lee (李健秋) ]
+  * debian/control: update team address.
+  * debian/control: add myself as uploader.
+  * debian/control: drop breaks and replaces on obsoleted version.
+  * debian/control: use nm-tray over cmst for network.
+    (Closes: #1035411, #971076)
+  * debian/copyright: update
+  * debian/salsa-ci.yml: added.
+
+ -- Andrew Lee (李健秋) <ajqlee@debian.org>  Fri, 08 Sep 2023 14:19:57 +0200
+
+lxqt-metapackages (31) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Upgrade to newer source format 3.0 (native) (Closes: #1007054).
+
+  [ ChangZhuo Chen (陳昌倬) ]
+  * Bump Standards-Version to 4.6.2.
+  * Bump compat to 13:
+    * Add "Rules-Requires-Root: no" in d/control.
+
+ -- ChangZhuo Chen (陳昌倬) <czchen@debian.org>  Fri, 06 Jan 2023 00:19:34 +0800
+
 lxqt-metapackages (30) unstable; urgency=medium
 
   * Use x-window-manager as alternative in lxqt (Closes: #942157)
@@ -9,7 +79,7 @@ lxqt-metapackages (30) unstable; urgency=medium
 lxqt-metapackages (29) unstable; urgency=medium
 
   * Recommends lxqt-branding-debian | lxqt-branding in lxqt-core
-  * Depends on lxqt-branding-debian | lxqt-branding in lxqt 
+  * Depends on lxqt-branding-debian | lxqt-branding in lxqt
 
  -- Alf Gaida <agaida@siduction.org>  Sun, 17 Feb 2019 21:57:08 +0100
 
